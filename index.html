@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Controle de Gastos</title>
+  <meta name="description" content="Controle financeiro simples: gastos, receitas, contas a pagar e fluxo de caixa.">
+  <meta name="theme-color" content="#2a78d6">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand" id="brand"></div>
+      <nav class="nav" id="nav" aria-label="Principal"></nav>
+      <div class="side-foot">Dados salvos neste aparelho.<br>Faça backup em <a href="#/config">Ajustes</a>.</div>
+    </aside>
+
+    <header class="topbar" id="topbar"></header>
+
+    <main id="view" tabindex="-1"></main>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Principal"></nav>
+  </div>
+
+  <button class="fab" id="fab" aria-label="Novo lançamento">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+
+  <dialog id="modal"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/lock.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/painel.js"></script>
+  <script src="js/relatorios.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
